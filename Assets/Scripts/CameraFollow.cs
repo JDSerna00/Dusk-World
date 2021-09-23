@@ -14,7 +14,7 @@ public class CameraFollow : MonoBehaviour
 
     void Start()
     {
-        size = bg1.GetComponent<BoxCollider2D>().size.y;
+       // size = bg1.GetComponent<BoxCollider2D>().size.y;
     }
 
     private void LateUpdate()

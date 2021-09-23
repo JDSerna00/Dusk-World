@@ -6,13 +6,14 @@ public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 10f;
     public Rigidbody2D rb;
+    Vector3 initPosition;
 
     private float moveX;
    
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-    
+        initPosition = this.transform.position;
     }
 
     void Update()
@@ -25,5 +26,9 @@ public class PlayerController : MonoBehaviour
        Vector2 velocity = rb.velocity;
        velocity.x = moveX;
        rb.velocity = velocity;
+    }
+    public void ResetPosition()
+    {
+        this.transform.position = initPosition;
     }
 }
