@@ -6,8 +6,7 @@ public class Destroyer : MonoBehaviour
 {
     public GameObject player;
     public GameObject platformPrefab;
-    private GameObject myPlat;
-
+    
 
     void Start()
     {
@@ -22,7 +21,6 @@ public class Destroyer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-      //myPlat = (GameObject)Instantiate(platformPrefab, new Vector2(Random.Range(-5.5f, 5.5f), player.transform.position.y + (14 + Random.Range(0.5f, 1f))), Quaternion.identity);
-      Destroy(collision.gameObject);  
+      Destroy (GameObject.FindWithTag("Platforms"), 0.5f );
     }
 }

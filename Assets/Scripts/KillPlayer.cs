@@ -4,19 +4,14 @@ using UnityEngine;
 
 public class KillPlayer : MonoBehaviour
 {
-    PlayerController pm;
 
-    void Start()
+   void OnCollisionEnter2D(Collision2D other)
     {
-        pm = FindObjectOfType<PlayerController>();
-    }
+        PlayerController player = other.gameObject.GetComponent<PlayerController>();
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-       if (collision.gameObject.CompareTag("Player"))
-       {
-          pm.ResetPosition();
-       }
-        
+        if (player != null)
+        {
+            player.ChangeHealth(1);
+        }
     }
 }
