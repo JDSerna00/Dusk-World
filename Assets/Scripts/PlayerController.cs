@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class PlayerController : MonoBehaviour
     public int maxHealth = 1;
     public int health = 1;
     public int currentHealth;
+    public TextMeshProUGUI countMonedasText;
+    private int count;
 
     private float moveX;
    
@@ -19,6 +22,9 @@ public class PlayerController : MonoBehaviour
         currentHealth = maxHealth;
         rb = GetComponent<Rigidbody2D>();
         initPosition = this.transform.position;
+        count = 0;
+
+        SetCountMonedasText();
     }
 
     void Update()
@@ -48,4 +54,19 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene("GameOver");
         }
     }
+
+    public void SetCountMonedasText()
+    {
+       countMonedasText.text = "" + count.ToString();
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+       if (other.gameObject.CompareTag("Monedas"))
+       {
+           count = count + 1;
+
+           SetCountMonedasText();
+       }
+    }   
 }

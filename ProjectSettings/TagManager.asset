@@ -6,6 +6,12 @@ TagManager:
   tags:
   - Background
   - Platforms
+  - Platforms2
+  - Monedas
+  - Platforms3
+  - Platforms4
+  - PlatformsEnemigo1
+  - PlatformsEnemigo2
   layers:
   - Default
   - TransparentFX
