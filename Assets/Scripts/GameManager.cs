@@ -12,13 +12,13 @@ public class GameManager : MonoBehaviour
     public GameObject enemigo1Prefab;
     public GameObject enemigo2Prefab;
 
-    public int platformCount = 200;
+    public int platformCount = 400;
     public int platform2Count = 30;
     public int platform3Count = 20;
     public int platform4Count = 10;
     public int monedasCount = 500;
-    public int enemigo1Count = 20;
-    public int enemigo2Count = 15;
+    public int enemigo1Count = 5;
+    public int enemigo2Count = 5;
 
     void Start()
     {
@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
 
         for (int i = 0; i < platformCount; i++)
         {
-            spawnPosition.y += Random.Range(100f, 100f);
+            spawnPosition.y += Random.Range(20f, 20f);
             spawnPosition.x = Random.Range(-20f, 20f);
             Instantiate(platformPrefab, spawnPosition, Quaternion.identity);
         }
@@ -35,8 +35,8 @@ public class GameManager : MonoBehaviour
 
         for (int i = 0; i < platform2Count; i++)
         {
-            spawnPosition2.y += Random.Range(130f, 130f);
-            spawnPosition2.x = Random.Range(-20f, 20f);
+            spawnPosition2.y += Random.Range(150f, 150f);
+            spawnPosition2.x = Random.Range(-27f, 27f);
             Instantiate(platform2Prefab, spawnPosition2, Quaternion.identity);
         }
 
@@ -44,26 +44,18 @@ public class GameManager : MonoBehaviour
 
         for (int i = 0; i < platform3Count; i++)
         {
-            spawnPosition3.y += Random.Range(150f, 150f);
+            spawnPosition3.y += Random.Range(290f, 290f);
             spawnPosition3.x = Random.Range(-25f, 25f);
             Instantiate(platform3Prefab, spawnPosition3, Quaternion.identity);
         }
 
-        Vector3 spawnPosition4 = new Vector3();
-
-        for (int i = 0; i < platform4Count; i++)
-        {
-            spawnPosition4.y += Random.Range(170f, 170f);
-            spawnPosition4.x = Random.Range(-23f, 23f);
-            Instantiate(platform4Prefab, spawnPosition4, Quaternion.identity);
-        }
 
         Vector3 spawnPositionEnemigo1 = new Vector3();
 
         for (int i = 0; i < enemigo1Count; i++)
         {
-            spawnPositionEnemigo1.y += Random.Range(120f, 120f);
-            spawnPositionEnemigo1.x = Random.Range(-10f, 10f);
+            spawnPositionEnemigo1.y += Random.Range(480f, 480f);
+            spawnPositionEnemigo1.x = Random.Range(-26f, 26f);
             Instantiate(enemigo1Prefab, spawnPositionEnemigo1, Quaternion.identity);
         }
 
@@ -71,8 +63,8 @@ public class GameManager : MonoBehaviour
 
         for (int i = 0; i < enemigo2Count; i++)
         {
-            spawnPositionEnemigo2.y += Random.Range(150f, 150f);
-            spawnPositionEnemigo2.x = Random.Range(-13f, 13f);
+            spawnPositionEnemigo2.y += Random.Range(790f, 790f);
+            spawnPositionEnemigo2.x = Random.Range(-30f, 30f);
             Instantiate(enemigo2Prefab, spawnPositionEnemigo2, Quaternion.identity);
         }
 

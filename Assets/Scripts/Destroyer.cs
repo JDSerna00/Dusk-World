@@ -22,11 +22,10 @@ public class Destroyer : MonoBehaviour
 
   private void OnTriggerEnter2D(Collider2D collision)
   {
-    Destroy (GameObject.FindWithTag("Platforms"), 10f );
-    Destroy (GameObject.FindWithTag("Platforms2"), 13f );
-    Destroy (GameObject.FindWithTag("Platforms3"), 15f );
-    Destroy (GameObject.FindWithTag("Platforms4"), 17f );
-    Destroy (GameObject.FindWithTag("PlatformsEnemigo1"), 12f );
-    Destroy (GameObject.FindWithTag("PlatformsEnemigo2"), 15f );
+    Destroy (GameObject.FindWithTag("Platforms"), 1.5f );
+    Destroy (GameObject.FindWithTag("Platforms2"), 15f );
+    Destroy (GameObject.FindWithTag("Platforms3"), 29f );
+    Destroy (GameObject.FindWithTag("PlatformsEnemigo1"), 48f );
+    Destroy (GameObject.FindWithTag("PlatformsEnemigo2"), 79f );
   }
 }
